@@ -4,7 +4,7 @@ Kongi is a configurable HTTP (ingress) proxy designed with built in observabilit
 ```markdown
 ## Usage
 
-To run the application, execute the compiled binary. Ensure a configuration file (e.g., `config.yaml`) is present in the same directory or specified via command-line arguments.
+To run the application, execute the compiled binary. Ensure a configuration file (e.g., `config.yaml`) is present in the same directory.
 
 The simplest configuration involves defining a proxy that forwards requests based on path and method.  Create a `config.yaml` file with the following content:
 
