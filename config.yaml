@@ -1,0 +1,15 @@
+port: 9000
+metrics:
+  path: "/metrics"
+  port: 9100
+paths: 
+  - path: "/foo"
+    method: "GET"
+    forwardPort: 8080
+    maxRetry: 3
+    timeout: 1s
+  - path: "/maj"
+    method: "GET"
+    forwardPort: 8081
+    maxRetry: 3
+    timeout: 1s
