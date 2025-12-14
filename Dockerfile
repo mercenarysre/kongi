@@ -17,4 +17,6 @@ FROM gcr.io/distroless/static
 
 COPY --from=build /app/kongi /kongi 
 
+EXPOSE 8080
+
 ENTRYPOINT ["/kongi"]
