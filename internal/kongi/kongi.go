@@ -98,7 +98,7 @@ func ProxyHandler(cfg config.ProxyConfig) http.Handler {
 
 			// Retry on 5xx
 			if resp.StatusCode >= 500 && resp.StatusCode <= 599 {
-				io.Copy(io.Discard, resp.Body)
+				_, _ = io.Copy(io.Discard, resp.Body)
 				resp.Body.Close()
 
 				attempt++
@@ -123,7 +123,7 @@ func ProxyHandler(cfg config.ProxyConfig) http.Handler {
 			}
 
 			rw.WriteHeader(resp.StatusCode)
-			io.Copy(rw, resp.Body)
+			_, _ = io.Copy(rw, resp.Body)
 			resp.Body.Close()
 			return
 		}
