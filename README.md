@@ -24,10 +24,9 @@ paths:
 This configuration sets up a proxy listening on port 8080.  It forwards GET requests to `/hello` to port 8081.  Metrics are exposed on `/metrics` at port 9090.
 
 ## Instructions 
-See [Makefile](./Makefile)
+- See [Makefile](./Makefile)
 
-Run `kongi` binary:
-
+- Run `kongi` binary:
 ```bash
 ./bin/kongi
 ```
