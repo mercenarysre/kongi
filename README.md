@@ -4,7 +4,7 @@ Kongi is a configurable HTTP (ingress) proxy designed with built in observabilit
 ```markdown
 ## Usage
 
-To run the application, execute the compiled binary. Ensure a configuration file (e.g., `config.yaml`) is present in the same directory.
+Ensure a configuration file (e.g., `config.yaml`) is present in the same directory.
 
 The simplest configuration involves defining a proxy that forwards requests based on path and method.  Create a `config.yaml` file with the following content:
 
@@ -21,12 +21,16 @@ paths:
     timeout: 5s
 ```
 
-Then, run the `kongi` binary:
-
-```bash
-./kongi
-```
-
 This configuration sets up a proxy listening on port 8080.  It forwards GET requests to `/hello` to port 8081.  Metrics are exposed on `/metrics` at port 9090.
 
+## Instructions 
+See [Makefile](./Makefile)
+
+Run `kongi` binary:
+
+```bash
+./bin/kongi
+```
+
 ## Dashboards
+![Kongi Metrics](./metrics.png)
